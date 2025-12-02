@@ -44,7 +44,7 @@ function ListaProductos() {
                                     <div key={producto.id} className="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
                                         <div className="card bg-light d-flex flex-fill">
                                             <div className="card-header text-muted border-bottom-0">
-                                                {producto.categoria}
+                                                {producto.category}
                                             </div>
                                             <div className="card-body pt-0">
                                                 <div className="row">
@@ -62,12 +62,12 @@ function ListaProductos() {
                                                                 <span className="fa-li">
                                                                     <i className="fas fa-lg fa-weight" />
                                                                 </span> 
-                                                                Unidad: {producto.unidad}
+                                                                Unidad: {producto.unit}
                                                             </li>
                                                         </ul>
                                                     </div>
                                                     <div className="col-5 text-center">
-                                                        <img src={producto.image} alt="product-image" className="img-circle img-fluid" />
+                                                        <img src={producto.image} alt={producto.name} className="img-fluid rounded" style={{ aspectRatio: '1 / 1', objectFit: 'cover', maxHeight: '150px' }}/>
                                                     </div>
                                                 </div>
                                             </div>

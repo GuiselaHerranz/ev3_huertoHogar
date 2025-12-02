@@ -20,13 +20,10 @@ function NavBarPrincipal() {
                  Huerto Hogar
             </a>
                 <li className="nav-item d-none d-sm-inline-block">
-                    <a href="/" className="nav-link">Inicio</a>
+                    <a href="/productos" className="nav-link">Productos</a>
                 </li>
                 <li className="nav-item d-none d-sm-inline-block">
-                    <a href="#" className="nav-link">Productos</a>
-                </li>
-                <li className="nav-item d-none d-sm-inline-block">
-                    <a href="#" className="nav-link">Contact</a>
+                    <a href="#" className="nav-link">Contacto</a>
                 </li>
             </ul>
             {/* Right navbar links */}
