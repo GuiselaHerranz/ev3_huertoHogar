@@ -6,9 +6,9 @@ function SideMenu() {
         <aside className="main-sidebar sidebar-dark-primary elevation-4">
             {/* Brand Logo */}
             <Link to="/" className="brand-link">
-                <img 
-                    src="/dist/img/banner/Logo.png" 
-                    alt="HuertoHogar Logo" 
+                <img
+                    src="/dist/img/banner/Logo.png"
+                    alt="HuertoHogar Logo"
                     className="brand-image img-circle elevation-3"
                     style={{ opacity: '.8', width: '33px', height: '33px' }}
                 />
@@ -20,20 +20,12 @@ function SideMenu() {
                 {/* Sidebar Menu */}
                 <nav className="mt-2">
                     <ul className="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                        
+
                         {/* Dashboard */}
                         <li className="nav-item">
-                            <Link to="/dashboard" className="nav-link">
+                            <Link to="/" className="nav-link">
                                 <i className="nav-icon fas fa-tachometer-alt"></i>
                                 <p>Dashboard</p>
-                            </Link>
-                        </li>
-
-                        {/* Cultivos */}
-                        <li className="nav-item">
-                            <Link to="/cultivos" className="nav-link">
-                                <i className="nav-icon fas fa-seedling"></i>
-                                <p>Mis Cultivos</p>
                             </Link>
                         </li>
 
@@ -45,19 +37,11 @@ function SideMenu() {
                             </Link>
                         </li>
 
-                        {/* Calculadora */}
+                        {/* Carrito de Compras */}
                         <li className="nav-item">
-                            <Link to="/calculadora" className="nav-link">
-                                <i className="nav-icon fas fa-calculator"></i>
-                                <p>Calculadora</p>
-                            </Link>
-                        </li>
-
-                        {/* Calendario */}
-                        <li className="nav-item">
-                            <Link to="/calendario" className="nav-link">
-                                <i className="nav-icon fas fa-calendar-alt"></i>
-                                <p>Calendario</p>
+                            <Link to="/carrito" className="nav-link">
+                                <i className="nav-icon fas fa-shopping-cart"></i>
+                                <p>Carrito de Compras</p>
                             </Link>
                         </li>
 

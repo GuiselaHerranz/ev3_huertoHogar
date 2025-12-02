@@ -58,7 +58,7 @@ function DetalleProducto() {
                     <div className="row">
                         <div className="col-md-3">
                             {/* Product Image */}
-                            <div className="card card-primary card-outline">
+                            <div className="card card-success card-outline">
                                 <div className="card-body box-profile">
                                     <div className="text-center">
                                         <img className="img-fluid rounded" src={productoImage} alt={productoNombre} style={{ maxHeight: '250px', objectFit: 'cover' }} />
@@ -79,12 +79,12 @@ function DetalleProducto() {
                                             <b>Stock</b> <span className="float-right">{productoStock} {productoUnidad}</span>
                                         </li>
                                     </ul>
-                                    <a href="#" className="btn btn-primary btn-block"><b>Agregar al Carrito</b></a>
+                                    <a href="#" className="btn btn-success btn-block"><b>Agregar al Carrito</b></a>
                                 </div>
                             </div>
 
                             {/* About Product Box */}
-                            <div className="card card-primary">
+                            <div className="card card-success">
                                 <div className="card-header">
                                     <h3 className="card-title">Información del Producto</h3>
                                 </div>
@@ -115,10 +115,7 @@ function DetalleProducto() {
                                 <div className="card-header p-2">
                                     <ul className="nav nav-pills">
                                         <li className="nav-item">
-                                            <a className="nav-link active" href="#descripcion" data-toggle="tab">Descripción</a>
-                                        </li>
-                                        <li className="nav-item">
-                                            <a className="nav-link" href="#sostenibilidad" data-toggle="tab">Sostenibilidad</a>
+                                            <a className="nav-link" href="#descripcion" data-toggle="tab">Descripción</a>
                                         </li>
                                         <li className="nav-item">
                                             <a className="nav-link" href="#recetas" data-toggle="tab">Recetas Sugeridas</a>
@@ -137,29 +134,11 @@ function DetalleProducto() {
                                                 <div className="user-block">
                                                     <img className="img-circle img-bordered-sm" src="/dist/img/banner/Logo.png" alt="HuertoHogar" />
                                                     <span className="username">
-                                                        <a href="#">HuertoHogar</a>
+                                                        <a href="#" className="text-dark">HuertoHogar</a>
                                                     </span>
                                                     <span className="description">Producto fresco y de calidad</span>
                                                 </div>
                                                 <p>{productoDescripcion}</p>
-                                            </div>
-                                        </div>
-
-                                        {/* Sostenibilidad Tab */}
-                                        <div className="tab-pane" id="sostenibilidad">
-                                            <h4>Compromiso con la Sostenibilidad</h4>
-                                            <p>
-                                                Este producto de <strong>{productoOrigen}</strong> es cultivado
-                                                bajo prácticas agrícolas sostenibles que garantizan su calidad
-                                                y valor nutricional, apoyando a comunidades locales y reduciendo
-                                                la huella de carbono.
-                                            </p>
-                                            <div className="callout callout-info mt-3">
-                                                <h5>🌱 Nuestro Compromiso</h5>
-                                                <p className="mb-0">
-                                                    Al comprar este producto, apoyas la agricultura local sostenible
-                                                    y contribuyes a un modelo de consumo más responsable.
-                                                </p>
                                             </div>
                                         </div>
 
