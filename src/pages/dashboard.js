@@ -1,7 +1,8 @@
-import React from 'react';
-import NavBarPrincipal from './components/navbar';
-import Banner from './components/banner';
-import SideMenu from './components/sidemenu';
+import React, { useEffect, useState } from "react";
+import NavBarPrincipal from "../pages/components/navbar";
+import SideMenu from "../pages/components/sidemenu";
+import Banner from "../pages/components/banner";
+import Kpisproductos from "../pages/components/kpisproductos";
 
 
 function Dashboard() {
@@ -10,6 +11,7 @@ function Dashboard() {
             <NavBarPrincipal/>
             <SideMenu/>
             <Banner/>
+            <Kpisproductos/>
         </div>
     );
 }
