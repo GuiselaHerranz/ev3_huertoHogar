@@ -5,7 +5,7 @@ function KpisProductos() {
     const [productos, setProductos] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3001/productos")
+        fetch("http://localhost:3001/api/productos")
             .then(res => res.json())
             .then(data => setProductos(data))
             .catch(() => setProductos([]));
