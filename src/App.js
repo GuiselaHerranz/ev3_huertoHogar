@@ -2,7 +2,6 @@ import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Dashboard from './pages/dashboard';
-import ListaProductos from './pages/components/lista_productos';
 import DetalleProducto from './pages/components/detalle_producto';
 import Producto from './pages/productos';
 
