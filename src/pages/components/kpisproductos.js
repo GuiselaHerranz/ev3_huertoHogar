@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 function KpisProductos() {
 
     const [productos, setProductos] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3001/api/productos")
-            .then(res => res.json())
-            .then(data => setProductos(data))
-            .catch(() => setProductos([]));
+        axios.get("http://localhost:3001/api/productos")
+            .then((res) => {
+                setProductos(res.data);
+            })
+            .catch(() => {
+                setProductos([]);
+            });
     }, []);
 
     const totalProductos = productos.length;
