@@ -5,13 +5,14 @@ import ListaProductos from './components/lista_productos';
 import Footer from './components/footer';
 
 
+
 function Producto() {
 
     return (
         <div>
             <NavBarPrincipal />
             <SideMenu />
-            <ListaProductos />
+            <ListaProductos  />
             <Footer/>
         </div>
 
