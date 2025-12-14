@@ -2,7 +2,7 @@ import React from 'react';
 
 function NavBarPrincipal() {
     return (
-        <nav className="main-header navbar navbar-expand navbar-dark bg-success">
+        <nav className="main-header navbar navbar-expand navbar-dark" style={{ backgroundColor: '#2e8b57ff' }}>
             
             {/* Left navbar links */}
             <ul className="navbar-nav">
@@ -23,7 +23,7 @@ function NavBarPrincipal() {
                     <a href="/productos" className="nav-link">Productos</a>
                 </li>
                 <li className="nav-item d-none d-sm-inline-block">
-                    <a href="#" className="nav-link">Contacto</a>
+                    <a href="/contacto" className="nav-link">Contacto</a>
                 </li>
             </ul>
             {/* Right navbar links */}

@@ -1,21 +1,22 @@
 import React from 'react';
 import NavBarPrincipal from './components/navbar';
 import SideMenu from './components/sidemenu';
-import DetalleProducto from './components/detalle_producto';
+import Us from './components/sobre_nosotros';
 import Footer from './components/footer';
 
 
-function ProductoDetalle() {
+
+function SobreNosotros() {
 
     return (
         <div>
             <NavBarPrincipal />
             <SideMenu />
-            <DetalleProducto/>
+            <Us/>
             <Footer/>
         </div>
 
     );
 }
 
-export default ProductoDetalle;
+export default SobreNosotros;

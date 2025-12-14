@@ -1,58 +1,42 @@
 import React from 'react';
 
-function Banner() {
+function BannerHuerto() {
     return (
-        <div className="content-header">
-            <div className="container-fluid">
-                <div className="row mb-2">
-                    <div className="col-sm-12">
-                        <div id="carouselHuerto" className="carousel slide" data-bs-ride="carousel">
-                            <div className="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselHuerto" data-bs-slide-to="0" className="active"></button>
-                                <button type="button" data-bs-target="#carouselHuerto" data-bs-slide-to="1"></button>
-                                <button type="button" data-bs-target="#carouselHuerto" data-bs-slide-to="2"></button>
-                            </div>
-                            
-                            <div className="carousel-inner rounded">
-                                <div className="carousel-item active">
-                                    <img 
-                                        src="/dist/img/banner/banner1.png" 
-                                        className="d-block w-100" 
-                                        alt="Huerto orgánico"
-                                        style={{ height: '400px', objectFit: 'cover' }}
-                                    />
-                                    
-                                </div>
-                                
-                                <div className="carousel-item">
-                                    <img 
-                                        src="/dist/img/banner/banner2.png" 
-                                        className="d-block w-100" 
-                                        alt="Productos frescos"
-                                        style={{ height: '400px', objectFit: 'cover' }}
-                                    />
-                                    
-                                </div>
-                                
-                                <div className="carousel-item">
-                                    <img 
-                                        src="/dist/img/banner/banner3.png" 
-                                        className="d-block w-100" 
-                                        alt="Cultivo sostenible"
-                                        style={{ height: '400px', objectFit: 'cover' }}
-                                    />
-                                    
-                                </div>
-                            </div>
-                            
-                            <button className="carousel-control-prev" type="button" data-bs-target="#carouselHuerto" data-bs-slide="prev">
-                                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span className="visually-hidden">Anterior</span>
-                            </button>
-                            <button className="carousel-control-next" type="button" data-bs-target="#carouselHuerto" data-bs-slide="next">
-                                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span className="visually-hidden">Siguiente</span>
-                            </button>
+        <div className='content-wrapper' style={{ backgroundColor: '#f4f6f9' }}>
+            {/* Título */}
+            <div className="text-center py-4">
+                <h2 style={{
+                    color: '#2e8b57ff',
+                    fontWeight: 'bold',
+                    fontSize: '2.8rem', 
+                    marginBottom: '0',
+                    textShadow: '1px 1px 2px rgba(0,0,0,0.1)', 
+                    marginBottom: '0'
+                }}>
+                    Bienvenidos a Huerto Hogar
+                </h2>
+            </div>
+
+            {/* Banner*/}
+            <div className="container-fluid mb-4">
+                <div className="row">
+                    <div className="col-12">
+                        <div style={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            backgroundColor: '#f4f6f9',
+                            padding: '20px 0'
+                        }}>
+                            <img src="/dist/img/banner/banner1.png" alt="Huerto Hogar" style={{
+                                width: '90%',
+                                maxWidth: '1200px',
+                                height: 'auto',
+                                maxHeight: '500px',
+                                borderRadius: '15px',
+                                objectFit: 'contain'
+                            }}
+                            />
                         </div>
                     </div>
                 </div>
@@ -61,4 +45,4 @@ function Banner() {
     );
 }
 
-export default Banner;
+export default BannerHuerto;

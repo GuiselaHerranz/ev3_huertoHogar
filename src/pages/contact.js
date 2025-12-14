@@ -1,21 +1,19 @@
 import React from 'react';
 import NavBarPrincipal from './components/navbar';
 import SideMenu from './components/sidemenu';
-import DetalleProducto from './components/detalle_producto';
-import Footer from './components/footer';
+import BannerHuerto from './components/banner';
+import FormularioContacto from './components/contacto';
 
-
-function ProductoDetalle() {
+function Contacto() {
 
     return (
         <div>
             <NavBarPrincipal />
             <SideMenu />
-            <DetalleProducto/>
-            <Footer/>
+            <FormularioContacto/>
         </div>
 
     );
 }
 
-export default ProductoDetalle;
+export default Contacto;

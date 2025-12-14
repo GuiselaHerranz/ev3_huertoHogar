@@ -56,7 +56,8 @@ function DetalleProducto() {
             <section className="content">
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-md-3">
+                        {/* Columna izquierda - Imagen e información básica */}
+                        <div className="col-md-4">
                             {/* Product Image */}
                             <div className="card card-success card-outline">
                                 <div className="card-body box-profile">
@@ -82,102 +83,116 @@ function DetalleProducto() {
                                     <a href="#" className="btn btn-success btn-block"><b>Agregar al Carrito</b></a>
                                 </div>
                             </div>
-
-                            {/* About Product Box */}
-                            <div className="card card-success">
-                                <div className="card-header">
-                                    <h3 className="card-title">Información del Producto</h3>
-                                </div>
-                                <div className="card-body">
-                                    <strong><i className="fas fa-tag mr-1"></i> Categoría</strong>
-                                    <p className="text-muted">{productoCategoria}</p>
-                                    <hr />
-
-                                    <strong><i className="fas fa-map-marker-alt mr-1"></i> Origen</strong>
-                                    <p className="text-muted">{productoOrigen}</p>
-                                    <hr />
-
-                                    <strong><i className="fas fa-weight mr-1"></i> Unidad</strong>
-                                    <p className="text-muted">{productoUnidad}</p>
-                                    <hr />
-                                    <strong><i className="fas fa-cubes mr-1"></i> Stock Disponible</strong>
-                                    <p className="text-muted">{productoStock} {productoUnidad}</p>
-                                    <hr />
-
-                                    <strong><i className="fas fa-dollar-sign mr-1"></i> Precio</strong>
-                                    <p className="text-muted">${productoPrecio.toLocaleString()} CLP</p>
-                                </div>
-                            </div>
                         </div>
 
-                        <div className="col-md-9">
-                            <div className="card">
-                                <div className="card-header p-2">
-                                    <ul className="nav nav-pills">
-                                        <li className="nav-item">
-                                            <a className="nav-link" href="#descripcion" data-toggle="tab">Descripción</a>
-                                        </li>
-                                        <li className="nav-item">
-                                            <a className="nav-link" href="#recetas" data-toggle="tab">Recetas Sugeridas</a>
-                                        </li>
-                                        <li className="nav-item">
-                                            <a className="nav-link" href="#impacto" data-toggle="tab">Impacto Ambiental</a>
-                                        </li>
-                                    </ul>
+                        {/* Columna derecha - About Product y Tabs */}
+                        <div className="col-md-8">
+                            <div className="row">
+                                {/* About Product Box - Ahora está arriba en la columna derecha */}
+                                <div className="col-12 mb-3">
+                                    <div className="card card-success" >
+                                        <div className="card-header">
+                                            <h3 className="card-title">Información del Producto</h3>
+                                        </div>
+                                        <div className="card-body">
+                                            <div className="row">
+                                                <div className="col-md-6">
+                                                    <strong><i className="fas fa-tag mr-1"></i> Categoría</strong>
+                                                    <p className="text-muted">{productoCategoria}</p>
+                                                    <hr />
+
+                                                    <strong><i className="fas fa-map-marker-alt mr-1"></i> Origen</strong>
+                                                    <p className="text-muted">{productoOrigen}</p>
+                                                    <hr />
+
+                                                    <strong><i className="fas fa-dollar-sign mr-1"></i> Precio</strong>
+                                                    <p className="text-muted">${productoPrecio.toLocaleString()} CLP</p>
+                                                </div>
+                                                <div className="col-md-6">
+                                                    <strong><i className="fas fa-weight mr-1"></i> Unidad</strong>
+                                                    <p className="text-muted">{productoUnidad}</p>
+                                                    <hr />
+                                                    <strong><i className="fas fa-cubes mr-1"></i> Stock Disponible</strong>
+                                                    <p className="text-muted">{productoStock} {productoUnidad}</p>
+                                                    <hr />
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div className="card-body">
-                                    <div className="tab-content">
-                                        {/* Descripción Tab */}
-                                        <div className="active tab-pane" id="descripcion">
-                                            <div className="post">
-                                                <div className="user-block">
-                                                    <img className="img-circle img-bordered-sm" src="/dist/img/banner/Logo.png" alt="HuertoHogar" />
-                                                    <span className="username">
-                                                        <a href="#" className="text-dark">HuertoHogar</a>
-                                                    </span>
-                                                    <span className="description">Producto fresco y de calidad</span>
-                                                </div>
-                                                <p>{productoDescripcion}</p>
-                                            </div>
-                                        </div>
-
-                                        {/* Recetas Sugeridas Tab */}
-                                        <div className="tab-pane" id="recetas">
-                                            <h4>Recetas Sugeridas con {productoNombre}</h4>
-                                            <p>
-                                                ¡Inspírate! Aquí tienes algunas ideas para incorporar este producto en tu cocina diaria:
-                                            </p>
-                                            <ul className="list-group list-group-unbordered mb-3">
-                                                <li className="list-group-item">
-                                                    <i className="fas fa-utensils mr-2"></i> Ensalada fresca de {productoNombre} y nueces.
+                                {/* Tabs de Descripción */}
+                                <div className="col-12">
+                                    <div className="card">
+                                        <div className="card-header p-2">
+                                            <ul className="nav nav-pills">
+                                                <li className="nav-item">
+                                                    <a className="nav-link" href="#descripcion" data-toggle="tab">Descripción</a>
                                                 </li>
-                                                <li className="list-group-item">
-                                                    <i className="fas fa-utensils mr-2"></i> Batido energizante de {productoNombre} y jengibre.
+                                                <li className="nav-item">
+                                                    <a className="nav-link" href="#recetas" data-toggle="tab">Recetas Sugeridas</a>
                                                 </li>
-                                                <li className="list-group-item">
-                                                    <i className="fas fa-utensils mr-2"></i> Tarta rústica de {productoNombre} y miel.
+                                                <li className="nav-item">
+                                                    <a className="nav-link" href="#impacto" data-toggle="tab">Impacto Ambiental</a>
                                                 </li>
                                             </ul>
-                                            <p className="text-muted mt-3">
-                                                *Nota: Esta es una sección de ejemplo. En una aplicación real, estos datos vendrían de una base de datos.
-                                            </p>
                                         </div>
 
-                                        {/* Impacto Ambiental Tab */}
-                                        <div className="tab-pane" id="impacto">
-                                            <h4>Huella de Carbono y Contribución Local</h4>
-                                            <div className="callout callout-success">
-                                                <h5><i className="fas fa-leaf mr-2"></i> Huella de Carbono</h5>
-                                                <p>
-                                                    La huella de carbono de este producto es un <strong>20% menor</strong> que el promedio, gracias a su origen local en <strong>{productoOrigen}</strong> y el uso de transporte eficiente.
-                                                </p>
-                                            </div>
-                                            <div className="callout callout-warning">
-                                                <h5><i className="fas fa-hand-holding-heart mr-2"></i> Contribución Local</h5>
-                                                <p>
-                                                    Tu compra apoya directamente a <strong>pequeños agricultores</strong> de la zona, fomentando la economía circular y la producción responsable.
-                                                </p>
+                                        <div className="card-body">
+                                            <div className="tab-content">
+                                                {/* Descripción Tab */}
+                                                <div className="active tab-pane" id="descripcion">
+                                                    <div className="post">
+                                                        <div className="user-block">
+                                                            <img className="img-circle img-bordered-sm" src="/dist/img/banner/Logo.png" alt="HuertoHogar" />
+                                                            <span className="username">
+                                                                <a href="#" className="text-dark">HuertoHogar</a>
+                                                            </span>
+                                                            <span className="description">Producto fresco y de calidad</span>
+                                                        </div>
+                                                        <p>{productoDescripcion}</p>
+                                                    </div>
+                                                </div>
+
+                                                {/* Recetas Sugeridas Tab */}
+                                                <div className="tab-pane" id="recetas">
+                                                    <h4>Recetas Sugeridas con {productoNombre}</h4>
+                                                    <p>
+                                                        ¡Inspírate! Aquí tienes algunas ideas para incorporar este producto en tu cocina diaria:
+                                                    </p>
+                                                    <ul className="list-group list-group-unbordered mb-3">
+                                                        <li className="list-group-item">
+                                                            <i className="fas fa-utensils mr-2"></i> Ensalada fresca de {productoNombre} y nueces.
+                                                        </li>
+                                                        <li className="list-group-item">
+                                                            <i className="fas fa-utensils mr-2"></i> Batido energizante de {productoNombre} y jengibre.
+                                                        </li>
+                                                        <li className="list-group-item">
+                                                            <i className="fas fa-utensils mr-2"></i> Tarta rústica de {productoNombre} y miel.
+                                                        </li>
+                                                    </ul>
+                                                    <p className="text-muted mt-3">
+                                                        *Nota: Esta es una sección de ejemplo. En una aplicación real, estos datos vendrían de una base de datos.
+                                                    </p>
+                                                </div>
+
+                                                {/* Impacto Ambiental Tab */}
+                                                <div className="tab-pane" id="impacto">
+                                                    <h4>Huella de Carbono y Contribución Local</h4>
+                                                    <div className="callout callout-success">
+                                                        <h5><i className="fas fa-leaf mr-2"></i> Huella de Carbono</h5>
+                                                        <p>
+                                                            La huella de carbono de este producto es un <strong>20% menor</strong> que el promedio, gracias a su origen local en <strong>{productoOrigen}</strong> y el uso de transporte eficiente.
+                                                        </p>
+                                                    </div>
+                                                    <div className="callout callout-warning">
+                                                        <h5><i className="fas fa-hand-holding-heart mr-2"></i> Contribución Local</h5>
+                                                        <p>
+                                                            Tu compra apoya directamente a <strong>pequeños agricultores</strong> de la zona, fomentando la economía circular y la producción responsable.
+                                                        </p>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

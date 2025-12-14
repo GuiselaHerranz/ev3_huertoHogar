@@ -1,8 +1,8 @@
 import React from 'react';
 import NavBarPrincipal from './components/navbar';
 import SideMenu from './components/sidemenu';
-import DetalleProducto from './components/detalle_producto';
 import ListaProductos from './components/lista_productos';
+import Footer from './components/footer';
 
 
 function Producto() {
@@ -12,6 +12,7 @@ function Producto() {
             <NavBarPrincipal />
             <SideMenu />
             <ListaProductos />
+            <Footer/>
         </div>
 
     );

@@ -3,7 +3,11 @@ import { Link } from 'react-router-dom';
 
 function SideMenu() {
     return (
-        <aside className="main-sidebar sidebar-dark-primary elevation-4">
+        <aside className="main-sidebar sidebar-dark-primary elevation-4" style={{ 
+            position: 'fixed',
+            height: '100vh',
+            overflowY: 'auto'
+        }}>
             {/* Brand Logo */}
             <Link to="/" className="brand-link">
                 <img
@@ -23,7 +27,7 @@ function SideMenu() {
 
                         {/* Dashboard */}
                         <li className="nav-item">
-                            <Link to="/" className="nav-link">
+                            <Link to="/dashboard" className="nav-link">
                                 <i className="nav-icon fas fa-tachometer-alt"></i>
                                 <p>Dashboard</p>
                             </Link>
@@ -42,6 +46,14 @@ function SideMenu() {
                             <Link to="/carrito" className="nav-link">
                                 <i className="nav-icon fas fa-shopping-cart"></i>
                                 <p>Carrito de Compras</p>
+                            </Link>
+                        </li>
+
+                        {/* Nosotros */}
+                        <li className="nav-item">
+                            <Link to="/nosotros" className="nav-link">
+                                <i className="nav-icon fas fa-users"></i>
+                                <p>Nosotros</p>
                             </Link>
                         </li>
 
